@@ -10,9 +10,15 @@
 
 
 @isset($fornecedores)
-    fornecedor: {{ $fornecedores[0]['nome'] }}
-    <br>
-    status: {{ $fornecedores[0]['status'] }}
-    <br>
-    Cpnj: {{ $fornecedores[0]['cnpj'] ?? 'Valor não preenchido' }}
+
+    @for($i = 0; isset($fornecedores[$i]); $i++)
+        fornecedor: {{ $fornecedores[$i]['nome'] }}
+        <br>
+        status: {{ $fornecedores[$i]['status'] }}
+        <br>
+        Cpnj: {{ $fornecedores[$i]['cnpj'] ?? '' }}
+        <br>
+        Telefone: {{ $fornecedores[$i]['ddd'] ?? '' }} {{ $fornecedores[$i]['telefone'] ?? '' }}
+        <hr>
+    @endfor
 @endisset

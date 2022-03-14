@@ -15,12 +15,30 @@ class appController extends Controller
             0 => [
                 'nome' => 'fornecedor 1',
                 'status' => 'N',   
-                'cnpj' => 'opa'
+                'cnpj' => 'opa',
+                'ddd' => '', //Petrolina
+                'telefone' => '0000-0000'
                 ],
             1 => [
                 'nome' => 'fornecedor 2',
+                'status' => 'N',  
+                'cnpj' => 'opa',
+                'ddd' => '74', // Juazeiro
+                'telefone' => '0000-0000'
+            ],
+            2 => [
+                'nome' => 'fornecedor 3',
                 'status' => 'S',  
-                'cnpj' => 'opa' 
+                'cnpj' => '000.000.000/00-000',
+                'ddd' => '81', // Recife
+                'telefone' => '0000-0000'
+            ],
+            3 => [
+                'nome' => 'fornecedor 4',
+                'status' => 'S',  
+                'cnpj' => '000.000.000/00-000',
+                'ddd' => '81', // Recife
+                'telefone' => '0000-0000'
             ],
         ];
 
