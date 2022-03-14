@@ -14,10 +14,5 @@
     <br>
     status: {{ $fornecedores[0]['status'] }}
     <br>
-    @isset($fornecedores[0]['cnpj'])
-        CNPJ: {{ $fornecedores[0]['cnpj'] }}
-            @empty($fornecedores[0]['cnpj'])
-                -vazio 
-            @endempty
-    @endisset
+    Cpnj: {{ $fornecedores[0]['cnpj'] }}
 @endisset
