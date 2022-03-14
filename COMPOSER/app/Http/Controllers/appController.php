@@ -11,7 +11,18 @@ class appController extends Controller
     }
 
     public function fornecedor(){
-        $fornecedores = [0 => ['nome' => 'fornecedor 1', 'status' => 'N']];
+        $fornecedores = [
+            0 => [
+                'nome' => 'fornecedor 1',
+                'status' => 'N',   
+                'cnpj' => 'opa'
+                ],
+            1 => [
+                'nome' => 'fornecedor 2',
+                'status' => 'S',   
+            ],
+        ];
+
         return view('app.fornecedor.index', compact('fornecedores'));
     }
 

@@ -9,15 +9,15 @@
 @endphp
 
 
-
-fornecedor: {{ $fornecedores[0]['nome'] }}
-<br>
-status: {{ $fornecedores[0]['status'] }}
-<br>
-@if($fornecedores[0]['status'] == 'S')
-    fornecedor Ativo
-@endif
-<br>
-@unless($fornecedores[0]['status'] == 'S')
-    fornecedor inativo
-@endunless
+@isset($fornecedores)
+    fornecedor: {{ $fornecedores[0]['nome'] }}
+    <br>
+    status: {{ $fornecedores[0]['status'] }}
+    <br>
+    @isset($fornecedores[0]['cnpj'])
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
+            @empty($fornecedores[0]['cnpj'])
+                -vazio 
+            @endempty
+    @endisset
+@endisset
