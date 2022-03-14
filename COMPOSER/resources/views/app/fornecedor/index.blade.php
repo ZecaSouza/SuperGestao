@@ -14,5 +14,5 @@
     <br>
     status: {{ $fornecedores[0]['status'] }}
     <br>
-    Cpnj: {{ $fornecedores[0]['cnpj'] }}
+    Cpnj: {{ $fornecedores[0]['cnpj'] ?? 'Valor não preenchido' }}
 @endisset

@@ -19,7 +19,8 @@ class appController extends Controller
                 ],
             1 => [
                 'nome' => 'fornecedor 2',
-                'status' => 'S',   
+                'status' => 'S',  
+                'cnpj' => 'opa' 
             ],
         ];
 
